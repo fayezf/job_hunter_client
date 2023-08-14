@@ -1,0 +1,6 @@
+.apply-now-btn:hover{
+    transform: scale(1.5);
+    transform-origin: left;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+}
