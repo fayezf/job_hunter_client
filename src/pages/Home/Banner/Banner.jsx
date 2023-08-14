@@ -9,8 +9,8 @@ const Banner = () => {
 
     return (
         <div className='h-[800px] bg-cover -mt-24' style={{ backgroundImage: `url(${bannerImage})` }}>
-            <div className='flex items-center w-9/12 mx-auto justify-between h-full'>
-                <div className='w-1/2 pe-40'>
+            <div className='flex items-end w-9/12 mx-auto justify-between h-full'>
+                <div className='w-1/2 pe-40 flex flex-col justify-center h-[700px]'>
                     <div className='flex gap-5 mb-5'>
                         <button onClick={() => setActiveButton('job poster')} className={
                             activeButton === 'job poster' ?
@@ -31,15 +31,15 @@ const Banner = () => {
                                 ''
                     }
                 </div>
-                <div className='w-1/2 h-full'>
+                <div className='w-1/2 h-[700px] flex flex-col justify-end'>
                     {
                         activeButton === 'job seeker' ?
-                            <div className='h-full flex flex-col justify-end'>
-                                <img className='' src={jobSeekerImage} alt="" />
+                            <div className='h-full'>
+                                <img className='h-full' src={jobSeekerImage} alt="" />
                             </div> :
                             activeButton === 'job poster' ?
-                                <div className='h-full flex flex-col justify-end'>
-                                    <img className='' src={jobPosterImage} alt="" />
+                                <div className='h-full'>
+                                    <img className='h-full' src={jobPosterImage} alt="" />
                                 </div> :
                                 ''
                     }
