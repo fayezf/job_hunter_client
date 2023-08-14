@@ -4,6 +4,8 @@ const SingleJob = ({ singleJob }) => {
 
     const { title, company, location, experience, postedDate, skills } = singleJob
 
+    // TODO: have to add company logo on every card
+
     return (
 
         <div className="p-6 bg-white border border-gray-200 rounded-lg shadow">
