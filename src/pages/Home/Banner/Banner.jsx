@@ -9,8 +9,6 @@ const Banner = () => {
 
     const [activeButton, setActiveButton] = useState('job seeker')
 
-    // TODO: animation effect on toggling
-
     return (
         <div className='h-[800px] bg-cover -mt-24' style={{ backgroundImage: `url(${bannerImage})` }}>
             <div className='flex items-end w-9/12 mx-auto justify-between h-full'>
@@ -27,17 +25,27 @@ const Banner = () => {
                                 'px-4 py-2 text-xl font-semibold border-2 border-blue-600 text-blue-600 hover:bg-blue-600 ease-in-out duration-200 hover:text-white'
                         }>Job Seeker</button>
                     </div>
-                    {
-                        activeButton === 'job seeker' ?
-                            <div>
-                                <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fit you so that you can build your career</h4>
-                            </div> :
-                            activeButton === 'job poster' ?
-                                <div>
-                                    <h4 className='text-4xl font-bold'>Searching for an Employee? Find the <span className='text-blue-500'>Best Employee</span> for your company</h4>
-                                </div> :
-                                ''
-                    }
+                    <CSSTransition
+                        in={activeButton === 'job seeker'}
+                        timeout={300}
+                        classNames="fade-up"
+                        unmountOnExit
+                    >
+                        <div>
+                            <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fit you so that you can build your career</h4>
+                        </div>
+                    </CSSTransition>
+
+                    <CSSTransition
+                        in={activeButton === 'job poster'}
+                        timeout={300}
+                        classNames="fade-up"
+                        unmountOnExit
+                    >
+                        <div>
+                            <h4 className='text-4xl font-bold'>Searching for an Employee? Find the <span className='text-blue-500'>Best Employee</span> for your company</h4>
+                        </div>
+                    </CSSTransition>
                 </div>
                 <div className='w-1/2 h-[700px] flex flex-col justify-end'>
                     <CSSTransition
