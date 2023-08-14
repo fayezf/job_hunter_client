@@ -2,6 +2,8 @@ import bannerImage from '../../../assets/images/easy-job-banner-image.jpg'
 import jobSeekerImage from '../../../assets/images/job-seeker-image.png'
 import jobPosterImage from '../../../assets/images/job-poster-image.png'
 import { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import './Banner.css'
 
 const Banner = () => {
 
@@ -27,24 +29,38 @@ const Banner = () => {
                     </div>
                     {
                         activeButton === 'job seeker' ?
-                            <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fit you so that you can build your career</h4> :
+                            <div>
+                                <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fit you so that you can build your career</h4>
+                            </div> :
                             activeButton === 'job poster' ?
-                                <h4 className='text-4xl font-bold'>Searching for an Employee? Find the <span className='text-blue-500'>Best Employee</span> for your company</h4> :
+                                <div>
+                                    <h4 className='text-4xl font-bold'>Searching for an Employee? Find the <span className='text-blue-500'>Best Employee</span> for your company</h4>
+                                </div> :
                                 ''
                     }
                 </div>
                 <div className='w-1/2 h-[700px] flex flex-col justify-end'>
-                    {
-                        activeButton === 'job seeker' ?
-                            <div className='h-full'>
-                                <img className='h-full' src={jobSeekerImage} alt="" />
-                            </div> :
-                            activeButton === 'job poster' ?
-                                <div className='h-full'>
-                                    <img className='h-full' src={jobPosterImage} alt="" />
-                                </div> :
-                                ''
-                    }
+                    <CSSTransition
+                        in={activeButton === 'job seeker'}
+                        timeout={300}
+                        classNames="fade-up"
+                        unmountOnExit
+                    >
+                        <div className='h-full'>
+                            <img className='h-full' src={jobSeekerImage} alt="" />
+                        </div>
+                    </CSSTransition>
+
+                    <CSSTransition
+                        in={activeButton === 'job poster'}
+                        timeout={300}
+                        classNames="fade-up"
+                        unmountOnExit
+                    >
+                        <div className='h-full'>
+                            <img className='h-full' src={jobPosterImage} alt="" />
+                        </div>
+                    </CSSTransition>
                 </div>
             </div>
         </div>
