@@ -3,7 +3,7 @@ import easyJobLog from '../../assets/images/easy-job-project-logo.png'
 
 const NavigationBar = () => {
     return (
-        <nav className="flex items-center justify-between w-9/12 mx-auto py-5">
+        <nav className="flex items-center justify-between w-9/12 mx-auto py-5 bg-transparent">
             <div className="flex">
                 <div>
                     <img className="w-[50px] h-[50px]" src={easyJobLog} alt="" />
