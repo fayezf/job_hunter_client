@@ -2,14 +2,21 @@ import './SingleJob.css'
 
 const SingleJob = ({ singleJob }) => {
 
-    const { title, company, location, experience, postedDate, skills } = singleJob
+    const { title, company, location, experience, postedDate, skills, logo } = singleJob
 
     // TODO: have to add company logo on every card
 
     return (
 
         <div className="p-6 bg-white border border-gray-200 rounded-lg shadow">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-500">{title}</h5>
+            <div className='flex items-center justify-between'>
+                <div>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-500">{title}</h5>
+                </div>
+                <div>
+                    <img className='w-[50px] h-[50px] rounded-full' src={logo} alt="" />
+                </div>
+            </div>
             <p className="font-normal ">Company: {company}</p>
             <p className="font-normal ">Location: {location}</p>
             <p className="font-normal ">Experience: {experience}</p>
@@ -23,7 +30,7 @@ const SingleJob = ({ singleJob }) => {
                     >{skill}</p>)
                 }
             </div>
-            <button className="inline-flex items-center justify-between px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:focus:ring-blue-800 apply-now-btn">Apply Now
+            <button className="inline-flex items-center justify-between px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 apply-now-btn">Apply Now
                 <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
