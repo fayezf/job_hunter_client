@@ -43,7 +43,7 @@ const NavigationBar = () => {
                         isActive ? "border-b-2 border-blue-500 px-2 py-1 text-blue-500" : "hover:border-b-2 ease-in-out duration-200 px-2 py-1 border-blue-500 hover:text-blue-500"
                     }
                 >
-                    Login
+                    Sign In
                 </NavLink>
             </div>
         </nav>

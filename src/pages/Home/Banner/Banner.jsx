@@ -7,6 +7,8 @@ const Banner = () => {
 
     const [activeButton, setActiveButton] = useState('job seeker')
 
+    // TODO: animation effect on toggling
+
     return (
         <div className='h-[800px] bg-cover -mt-24' style={{ backgroundImage: `url(${bannerImage})` }}>
             <div className='flex items-end w-9/12 mx-auto justify-between h-full'>
@@ -25,9 +27,9 @@ const Banner = () => {
                     </div>
                     {
                         activeButton === 'job seeker' ?
-                            <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>best job</span> that fit you so that you can build your career</h4> :
+                            <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fit you so that you can build your career</h4> :
                             activeButton === 'job poster' ?
-                                <h4 className='text-4xl font-bold'>Searching for an Employee? Find the <span className='text-blue-500'>best Employee</span> for your company</h4> :
+                                <h4 className='text-4xl font-bold'>Searching for an Employee? Find the <span className='text-blue-500'>Best Employee</span> for your company</h4> :
                                 ''
                     }
                 </div>
