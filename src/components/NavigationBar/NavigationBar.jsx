@@ -21,7 +21,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <nav className="flex items-center justify-between w-9/12 mx-auto py-5 bg-transparent">
+        <div className="flex items-center justify-between navbar w-9/12 mx-auto py-5 bg-transparent">
             <div className="flex">
                 <div>
                     <img className="w-[50px] h-[50px]" src={easyJobLog} alt="" />
@@ -69,7 +69,7 @@ const NavigationBar = () => {
                         </NavLink>
                 }
             </div>
-        </nav>
+        </div>
     );
 };
 

@@ -6,11 +6,11 @@ const SingleCompany = ({ singleCompany }) => {
     const { name, location, employees, photo } = singleCompany
 
     return (
-        <div className="flex flex-col items-center rounded-lg shadow-2xl md:flex-row md:max-w-xl bg-slate-100 w-1/3">
-            <img className=" h-full rounded-s-lg" src={photo} alt="" />
+        <div className="flex flex-col items-center rounded-lg shadow-2xl md:flex-row md:max-w-xl h-40 bg-slate-100">
+            <img style={{width: '70px', height: '70px'}} className=" rounded-s-lg" src={photo} alt="" />
             <div className="flex flex-col justify-between p-4 leading-normal">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-3">
                     <p className="mb-3 font-normal text-gray-700 flex items-center gap-1 text-xl"><TiLocation></TiLocation> {location}</p>
                     <div className="mb-3 font-normal text-gray-700 flex items-center gap-2 text-xl">
                         <FaUsers></FaUsers>
