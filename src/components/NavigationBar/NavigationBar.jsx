@@ -21,13 +21,13 @@ const NavigationBar = () => {
     }
 
     return (
-        <div className="flex items-center justify-between navbar w-9/12 mx-auto py-5 bg-transparent">
-            <div className="flex">
+        <nav className="flex items-center justify-between w-9/12 mx-auto py-5 bg-transparent">
+            <div className="flex gap-1">
                 <div>
                     <img className="w-[50px] h-[50px]" src={easyJobLog} alt="" />
                 </div>
                 <div>
-                    <h1 className="text-4xl font-semibold text-white">Career<span className="text-teal-600">Fy</span></h1>
+                    <h1 className="text-4xl font-semibold text-blue-500">Career<span className="text-teal-700">Fy</span></h1>
                 </div>
             </div>
             <div className="flex gap-5 text-xl">
@@ -69,7 +69,7 @@ const NavigationBar = () => {
                         </NavLink>
                 }
             </div>
-        </div>
+        </nav>
     );
 };
 
