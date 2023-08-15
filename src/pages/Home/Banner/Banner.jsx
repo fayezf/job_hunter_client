@@ -1,5 +1,5 @@
-import bannerImage from '../../../assets/images/easy-job-banner-image.jpg'
-import jobSeekerImage from '../../../assets/images/job-seeker-image.png'
+import bannerImage from '../../../assets/images/banner.jpg'
+import jobSeekerImage from '../../../assets/images/job-seeker.png'
 import jobPosterImage from '../../../assets/images/job-poster-image.png'
 import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
@@ -10,7 +10,7 @@ const Banner = () => {
     const [activeButton, setActiveButton] = useState('job seeker')
 
     return (
-        <div className='h-[800px] bg-cover -mt-24' style={{ backgroundImage: `url(${bannerImage})` }}>
+        <div className='h-[800px] bg-cover -mt-24 flex justify-center items-center' style={{ backgroundImage: `url(${bannerImage})` }}>
             <div className='flex items-end w-9/12 mx-auto justify-between h-full'>
                 <div className='w-1/2 pe-40 flex flex-col justify-center h-[700px]'>
                     <div className='flex gap-5 mb-5'>
@@ -32,7 +32,7 @@ const Banner = () => {
                         unmountOnExit
                     >
                         <div>
-                            <h4 className='text-4xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fit you so that you can build your career</h4>
+                            <h4 className='text-3xl font-bold'>Searching for a Job? Find the <span className='text-blue-500'>Best Job</span> that fits you so that you can build your career</h4>
                         </div>
                     </CSSTransition>
 
@@ -72,6 +72,7 @@ const Banner = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

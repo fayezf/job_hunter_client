@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import easyJobLog from '../../assets/images/easy-job-project-logo.png'
+import easyJobLog from '../../assets/images/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
@@ -27,7 +27,7 @@ const NavigationBar = () => {
                     <img className="w-[50px] h-[50px]" src={easyJobLog} alt="" />
                 </div>
                 <div>
-                    <h1 className="text-4xl font-semibold">Easy Job</h1>
+                    <h1 className="text-4xl font-semibold text-white">Career<span className="text-teal-600">Fy</span></h1>
                 </div>
             </div>
             <div className="flex gap-5 text-xl">
